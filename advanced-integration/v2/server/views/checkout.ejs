@@ -9,6 +9,7 @@
   </head>
   <body>
     <div id="paypal-button-container" class="paypal-button-container"></div>
+    <div id="applepay-container"></div>
     <div id="card-form" class="card_container">
       <div id="card-name-field-container"></div>
       <div id="card-number-field-container"></div>
@@ -17,7 +18,8 @@
       <button id="multi-card-field-button" type="button">Pay now with Card</button>
     </div>
     <p id="result-message"></p>
-    <script src="https://www.paypal.com/sdk/js?components=buttons,card-fields&client-id=<%= clientId %>"></script>
+    <script src="https://applepay.cdn-apple.com/jsapi/v1/apple-pay-sdk.js"></script>
+    <script src="https://www.paypal.com/sdk/js?currency=USD&buyer-country=US&merchant-id=B9864RVFVZWEW&components=buttons,card-fields,applepay&client-id=<%= clientId %>"></script>
     <script src="checkout.js"></script>
   </body>
 </html>
